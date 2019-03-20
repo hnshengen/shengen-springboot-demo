@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS guns_test;
-CREATE DATABASE IF NOT EXISTS guns_test DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+DROP DATABASE IF EXISTS se_test;
+CREATE DATABASE IF NOT EXISTS se_test DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 
-use guns_test;
+use se_test;
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;

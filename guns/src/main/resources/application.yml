@@ -1,8 +1,9 @@
 server:
   port: 80
   max-http-header-size: 10240
+  address: 0.0.0.0
 
-guns:
+se:
   swagger-open: true                #是否开启swagger (true/false)
   kaptcha-open: false               #是否开启登录时验证码 (true/false)
   spring-session-open: false        #是否开启spring session,如果是多机环境需要开启(true/false)
@@ -14,7 +15,7 @@ beetl:
 
 spring:
   profiles:
-    active: @spring.active@
+    active: "@spring.active@"
   mvc:
     view:
       prefix: /pages
@@ -29,7 +30,7 @@ spring:
       max-file-size: 100MB
 
 mybatis-plus:
-  typeAliasesPackage: cn.stylefeng.guns.modular.system.model
+  typeAliasesPackage: com.se.manager.modular.system.model
 
 log:
-  path: guns-logs
+  path: se-logs

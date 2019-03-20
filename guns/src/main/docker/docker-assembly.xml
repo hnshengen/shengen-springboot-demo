@@ -3,8 +3,8 @@
           xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
     <files>
         <file>
-            <source>target/${project.artifactId}.jar</source>
-            <destName>${project.artifactId}.jar</destName>
+            <source>target/${project.artifactId}.war</source>
+            <destName>${project.artifactId}.war</destName>
         </file>
     </files>
 </assembly>

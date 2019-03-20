@@ -10,12 +10,12 @@
         <version>2.1.1.RELEASE</version>
     </parent>
 
-    <groupId>cn.stylefeng</groupId>
-    <artifactId>guns</artifactId>
+    <groupId>com.se</groupId>
+    <artifactId>manager</artifactId>
     <version>1.0.0</version>
 
-    <name>guns-admin</name>
-    <description>guns 的spring boot版本</description>
+    <name>se-manager</name>
+    <description>圣恩管理系统</description>
 
     <packaging>jar</packaging>
 
@@ -231,12 +231,12 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.26.1</version>
                 <configuration>
-                    <dockerHost>tcp://demo.stylefeng.cn:2376</dockerHost>
+                    <dockerHost>tcp://192.168.11.128:2375</dockerHost>
                     <certPath>_dockerCerts</certPath>
                     <images>
                         <image>
                             <alias>service</alias>
-                            <name>stylefeng/${project.artifactId}:latest</name>
+                            <name>se/${project.artifactId}:latest</name>
                             <build>
                                 <from>java:8</from>
                                 <assembly>
@@ -275,7 +275,7 @@
                 <spring.active>local</spring.active>
             </properties>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
         </profile>
         <profile>
@@ -283,6 +283,9 @@
             <properties>
                 <spring.active>dev</spring.active>
             </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
     </profiles>
 
